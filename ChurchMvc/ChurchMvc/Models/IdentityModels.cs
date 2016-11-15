@@ -20,6 +20,9 @@ namespace ChurchMvc.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Customer> Customers { set; get; }
+        public DbSet<Group> Groups { set; get; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

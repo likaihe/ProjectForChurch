@@ -11,6 +11,5 @@ namespace ChurchMvc.Models
         public string Name { set; get; }
 
         public List<Customer> Customers { set; get; }
-
     }
 }

@@ -200,6 +200,14 @@
     <Compile Include="Migrations\201611150323063_add.Designer.cs">
       <DependentUpon>201611150323063_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611150414314_addId.cs" />
+    <Compile Include="Migrations\201611150414314_addId.Designer.cs">
+      <DependentUpon>201611150414314_addId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611150511299_improveCustomersGroup.cs" />
+    <Compile Include="Migrations\201611150511299_improveCustomersGroup.Designer.cs">
+      <DependentUpon>201611150511299_improveCustomersGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -289,6 +297,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611150323063_add.resx">
       <DependentUpon>201611150323063_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611150414314_addId.resx">
+      <DependentUpon>201611150414314_addId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611150511299_improveCustomersGroup.resx">
+      <DependentUpon>201611150511299_improveCustomersGroup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

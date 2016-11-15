@@ -25,7 +25,12 @@ namespace ChurchMvc.Controllers.Api
 
         public IHttpActionResult GetCustomersByGroup(int id)
         {
-            return Ok(_context.Groups.SingleOrDefault(c => c.Id == id).Customers.ToList());
+            return Ok(_context.Groups.Where(c => c.Id == id).SelectMany(c =>c.Customers).ToList());
+        }
+
+        public IHttpActionResult GetCustomerById(int id)
+        {
+            return Ok(_context.Customers.SingleOrDefault(c => c.Id == id));
         }
 
         public IHttpActionResult GetGroupById(int id)
@@ -38,9 +43,6 @@ namespace ChurchMvc.Controllers.Api
             return Ok(_context.Groups.ToList());
         }
 
-        //    public IHttpActionResult GetCustomerById(int id)
-        //    {
-        //        return Ok(_context.Customers.SingleOrDefault(c => c.Id == id));
-        //    }
+       
     }
 }

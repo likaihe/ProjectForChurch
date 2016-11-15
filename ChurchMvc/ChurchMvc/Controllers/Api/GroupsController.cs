@@ -17,10 +17,30 @@ namespace ChurchMvc.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-        //GET/Api/GROUP
+        //GET/Api/GroupS/{action}
         public IHttpActionResult GetCustomers()
         {
             return Ok(_context.Customers.ToList());
         }
+
+        public IHttpActionResult GetCustomersByGroup(int id)
+        {
+            return Ok(_context.Groups.SingleOrDefault(c => c.Id == id).Customers.ToList());
+        }
+
+        public IHttpActionResult GetGroupById(int id)
+        {
+            return Ok(_context.Groups.SingleOrDefault(c => c.Id == id));
+        }
+
+        public IHttpActionResult GetGroups()
+        {
+            return Ok(_context.Groups.ToList());
+        }
+
+        //    public IHttpActionResult GetCustomerById(int id)
+        //    {
+        //        return Ok(_context.Customers.SingleOrDefault(c => c.Id == id));
+        //    }
     }
 }

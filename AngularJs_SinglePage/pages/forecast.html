@@ -1,0 +1,19 @@
+Forecast for {{weatherResult.city.country}} {{ cityName }}
+
+People in 
+<hr />
+<a href="#/">Back</a>
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+            <weather-report day = "w" 
+                     convert-to-fahrenheit = "convertToFahrenheit(k)" convert-to-date = "convertToDate(dt)"  
+                     convert-to-centigrade = "convertToCentigrade(k)"
+                            ></weather-report>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
